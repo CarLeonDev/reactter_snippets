@@ -3,7 +3,7 @@
   "name": "reacttersnippets",
   "displayName": "Reactter Snippets",
   "description": "Quick and easy Reactter snippets",
-  "icon": "logo.png",
+  "icon": "media/reactter.png",
   "publisher": "CarLeonDev",
   "homepage": "https://github.com/CarLeonDev/reactter-snippets",
   "repository": {
