@@ -1,0 +1,33 @@
+{
+  "version": "0.0.1",
+  "name": "reacttersnippets",
+  "displayName": "Reactter Snippets",
+  "description": "Quick and easy Reactter snippets",
+  "icon": "logo.png",
+  "publisher": "CarLeonDev",
+  "homepage": "https://github.com/CarLeonDev/reactter-snippets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CarLeonDev/reactter-snippets"
+  },
+  "keywords": [
+    "Flutter",
+    "Dart",
+    "Snippets",
+    "Reactter"
+  ],
+  "engines": {
+    "vscode": "^1.32.0"
+   },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+        {
+          "language": "javascript",
+          "path": "./snippets/snippets.json"
+        }
+    ]
+   }
+}

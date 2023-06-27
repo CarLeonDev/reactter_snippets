@@ -1,0 +1,267 @@
+{
+  "Reactter ReactterComponent": {
+    "body": [
+      "class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends ReactterComponent<${2:T}> {",
+      "\tconst ${1:name}({Key? key}) : super(key: key);",
+      "",
+      "\t@override",
+      "\tget builder => () => $2();",
+      "",
+      "\t@override",
+      "\tWidget render(inst, context) {",
+      "\t\treturn ${3:${TM_SELECTED_TEXT:Widget()}};",
+      "\t}",
+      "}"
+    ],
+    "description": "Create a simple ReactterComponent.",
+    "prefix": [
+      "rcomponent"
+    ],
+    "scope": "dart"
+  },
+  "Reactter ReactterProvider": {
+    "body": [
+      "ReactterProvider(",
+      "\t() => ${1:T}(),",
+      "\tbuilder: (inst, context, child) {",
+      "\t\treturn ${2:${TM_SELECTED_TEXT:Widget()}};",
+      "\t},",
+      ")"
+    ],
+    "description": "Create a simple ReactterProvider.",
+    "prefix": [
+      "rprovider"
+    ],
+    "scope": "dart"
+  },
+  "Reactter ReactterProviders": {
+    "body": [
+      "ReactterProviders(",
+      "\t[",
+      "\t\t$0",
+      "\t],",
+      "\tbuilder: (context, child) {",
+      "\t\treturn ${1:${TM_SELECTED_TEXT:Widget()}};",
+      "\t},",
+      ")"
+    ],
+    "description": "Create a simple ReactterProviders.",
+    "prefix": [
+      "rproviders"
+    ],
+    "scope": "dart"
+  },
+  "Reactter ReactterWatcher": {
+    "body": [
+      "ReactterWatcher(",
+      "\tbuilder: (context, child) {",
+      "\t\treturn ${:${TM_SELECTED_TEXT:Widget()}};",
+      "\t},",
+      ")"
+    ],
+    "description": "Create a simple ReactterWatcher.",
+    "prefix": [
+      "rwatcher"
+    ],
+    "scope": "dart"
+  },
+  "Reactter Signal": {
+    "body": [
+      "final ${1:name} = Signal(${2:initialValue});"
+    ],
+    "description": "Create a simple Signal.",
+    "prefix": [
+      "rsignal",
+      "rsgnl"
+    ],
+    "scope": "dart"
+  },
+  "Reactter UseAsyncState": {
+    "body": [
+      "final ${1:name} = UseAsyncState<${2:T}, ${3:A}>(${4:initialValue}, ${5:actionName});",
+      "",
+      "Future<$2> $5($3 args) async {",
+      "\treturn $0;",
+      "}"
+    ],
+    "description": "Create a simple UseAsyncState.",
+    "prefix": [
+      "ruasync"
+    ],
+    "scope": "dart"
+  },
+  "Reactter UseAsyncState.when": {
+    "body": [
+      "final ${1:name}Computed = ${2:nameOfUseAsyncState}.when<${3:T}>(",
+      "\tstandby: (value) => $0,",
+      "\tloading: (value) => $0,",
+      "\tdone: (value) => $0,",
+      "\terror: (error) => $0,",
+      ");"
+    ],
+    "description": "Create a simple UseAsyncState.",
+    "prefix": [
+      "ruawhen"
+    ],
+    "scope": "dart"
+  },
+  "Reactter UseContext": {
+    "body": [
+      "final ${1:name} = UseContext<${2:T}>($0);"
+    ],
+    "description": "Create a simple UseContext.",
+    "prefix": [
+      "rucontext"
+    ],
+    "scope": "dart"
+  },
+  "Reactter UseEffect": {
+    "body": [
+      "UseEffect(",
+      "\t(){$0},",
+      "\t[${1:dependencies}],",
+      "\t${2:instance},",
+      ");"
+    ],
+    "description": "Create a simple UseEffect.",
+    "prefix": [
+      "rueffect"
+    ],
+    "scope": "dart"
+  },
+  "Reactter UseEvent": {
+    "body": [
+      "UseEvent<${2:T}>();"
+    ],
+    "description": "Create a simple UseEvent.",
+    "prefix": [
+      "ruevent"
+    ],
+    "scope": "dart"
+  },
+  "Reactter UseReducer": {
+    "body": [
+      "final ${1:name} = UseReducer<${2:T}>(${3:nameReducer}, ${4:initialStore});",
+      "",
+      "$2 $3($2 state, ReactterAction action) {",
+      "\t//Here, resolve the next state",
+      "\treturn $0;",
+      "}"
+    ],
+    "description": "Create a simple UseReducer.",
+    "prefix": [
+      "rureducer"
+    ],
+    "scope": "dart"
+  },
+  "Reactter UseState": {
+    "body": [
+      "final ${1:name} = UseState(${2:initialValue});"
+    ],
+    "description": "Create a simple UseState.",
+    "prefix": [
+      "rustate"
+    ],
+    "scope": "dart"
+  },
+  "Reactter context use": {
+    "body": [
+      "context.use<${1:T}>('${0:id}');"
+    ],
+    "description": "Get a instance",
+    "prefix": [
+      "ruse"
+    ],
+    "scope": "dart"
+  },
+  "Reactter context watch": {
+    "body": [
+      "context.watch<${1:T}>((inst) => [${0:depencencies}]);"
+    ],
+    "description": "Get a instance and watch dependencies",
+    "prefix": [
+      "rwatch"
+    ],
+    "scope": "dart"
+  },
+  "Reactter context watchId": {
+    "body": [
+      "context.watchId<${1:T}>('{2:id}', (inst) => [${0:depencencies}]);"
+    ],
+    "description": "Get a instance by id and watch dependencies",
+    "prefix": [
+      "rwatchid"
+    ],
+    "scope": "dart"
+  },
+  "Reactter create": {
+    "body": [
+      "Reactter.create(builder: ${1:T}());"
+    ],
+    "description": "Create a instance.",
+    "prefix": [
+      "rcreate"
+    ],
+    "scope": "dart"
+  },
+  "Reactter delete": {
+    "body": [
+      "Reactter.delete();"
+    ],
+    "description": "Delete a instance.",
+    "prefix": [
+      "rdelete"
+    ],
+    "scope": "dart"
+  },
+  "Reactter emit event": {
+    "body": [
+      "Reactter.emit(${1:instance}(), ${2:event}, ${0:param});"
+    ],
+    "description": "Trigger event.",
+    "prefix": [
+      "remit"
+    ],
+    "scope": "dart"
+  },
+  "Reactter get": {
+    "body": [
+      "Reactter.get<${1:T}>();"
+    ],
+    "description": "Get instance.",
+    "prefix": [
+      "rget"
+    ],
+    "scope": "dart"
+  },
+  "Reactter off event": {
+    "body": [
+      "Reactter.off(${1:instance}(), ${2:event}, ${0:callback});"
+    ],
+    "description": "Remov event listen",
+    "prefix": [
+      "roff"
+    ],
+    "scope": "dart"
+  },
+  "Reactter on event": {
+    "body": [
+      "Reactter.on(${1:instance}, ${2:event}, ${0:callback});"
+    ],
+    "description": "Put event on listen",
+    "prefix": [
+      "ron"
+    ],
+    "scope": "dart"
+  },
+  "Reactter one event": {
+    "body": [
+      "Reactter.one(${1:instance}(), ${2:event}, ${0:callback});"
+    ],
+    "description": "Put event on listen for only once.",
+    "prefix": [
+      "rone"
+    ],
+    "scope": "dart"
+  }
+}
