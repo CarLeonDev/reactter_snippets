@@ -23,29 +23,32 @@ This extension providers some Snippets for [`Reactter`](https://pub.dev/packages
 
 |Prefix|Method|
 |-------:|-------|
-|`rregister`|`Reactter.register`|
-|`runregister`|`Reactter.unregister`|
-|`rget`|`Reactter.get`|
-|`rcreate`|`Reactter.create`|
-|`rdelete`|`Reactter.delete`|
+|`rregister`|`Rt.register`|
+|`runregister`|`Rt.unregister`|
+|`rget`|`Rt.get`|
+|`rcreate`|`Rt.create`|
+|`rdelete`|`Rt.delete`|
 
 ## Shortcuts to manage event
 
 |Prefix|Method|
 |-------:|-------|
-|`ron`|`Reactter.on`|
-|`rone`|`Reactter.one`|
-|`roff`|`Reactter.off`|
-|`remit`|`Reactter.emit`|
+|`ron`|`Rt.on`|
+|`rone`|`Rt.one`|
+|`roff`|`Rt.off`|
+|`remit`|`Rt.emit`|
 
 ## Widgets
 
 |Prefix|Widget|
 |-------:|-------|
-|`rprovider`|`ReactterProvider`|
-|`rproviders`|`ReactterProviders`|
-|`rcomponent`|`ReactterComponent`|
-|`rwatcher`|`ReactterWatcher`|
+|`rcomponent`|`RtComponent`|
+|`rmprovider`|`RtMultiProvider`|
+|`rprovider`|`RtProvider`|
+|`rconsumer`|`RtConsumer`|
+|`rselector`|`RtSelector`|
+|`rwatcher`|`RtWatcher`|
+|`rswatcher`|`RtSignalWatcher`|
 
 ## BuildContext extension
 

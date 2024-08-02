@@ -1,42 +1,27 @@
 {
-  "Reactter ReactterComponent": {
+  "Reactter RtComponent": {
     "body": [
-      "class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends ReactterComponent<${2:T}> {",
+      "class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends RtComponent<${2:T}> {",
       "\tconst ${1:name}({Key? key}) : super(key: key);",
       "",
       "\t@override",
       "\tget builder => () => $2();",
       "",
       "\t@override",
-      "\tWidget render(inst, context) {",
+      "\tWidget render(context, inst) {",
       "\t\treturn ${3:${TM_SELECTED_TEXT:Widget()}};",
       "\t}",
       "}"
     ],
-    "description": "Create a simple ReactterComponent.",
+    "description": "Create a simple RtComponent.",
     "prefix": [
       "rcomponent"
     ],
     "scope": "dart"
   },
-  "Reactter ReactterProvider": {
+  "Reactter RtMultiProvider": {
     "body": [
-      "ReactterProvider(",
-      "\t() => ${1:T}(),",
-      "\tbuilder: (inst, context, child) {",
-      "\t\treturn ${2:${TM_SELECTED_TEXT:Widget()}};",
-      "\t},",
-      ")"
-    ],
-    "description": "Create a simple ReactterProvider.",
-    "prefix": [
-      "rprovider"
-    ],
-    "scope": "dart"
-  },
-  "Reactter ReactterProviders": {
-    "body": [
-      "ReactterProviders(",
+      "RtMultiProvider(",
       "\t[",
       "\t\t$0",
       "\t],",
@@ -45,23 +30,79 @@
       "\t},",
       ")"
     ],
-    "description": "Create a simple ReactterProviders.",
+    "description": "Create a simple RtMultiProvider.",
     "prefix": [
-      "rproviders"
+      "rmprovider"
     ],
     "scope": "dart"
   },
-  "Reactter ReactterWatcher": {
+  "Reactter RtProvider": {
     "body": [
-      "ReactterWatcher(",
+      "RtProvider(",
+      "\t() => ${1:T}(),",
+      "\tbuilder: (context, inst, child) {",
+      "\t\treturn ${2:${TM_SELECTED_TEXT:Widget()}};",
+      "\t},",
+      ")"
+    ],
+    "description": "Create a simple RtProvider.",
+    "prefix": [
+      "rprovider"
+    ],
+    "scope": "dart"
+  },
+  "Reactter RtConsumer": {
+    "body": [
+      "RtConsumer<${1:T}>(",
+      "\tbuilder: (context, inst, child) {",
+      "\t\treturn ${2:${TM_SELECTED_TEXT:Widget()}};",
+      "\t},",
+      ")"
+    ],
+    "description": "Create a simple RtConsumer.",
+    "prefix": [
+      "rconsumer"
+    ],
+    "scope": "dart"
+  },
+  "Reactter RtSelector": {
+    "body": [
+      "RtSelector<${1:T}, ${2:R}>(",
+      "\tselector: (inst, $) => ${3:inst},",
+      "\tbuilder: (context, inst, value, child) {",
+      "\t\treturn ${4:${TM_SELECTED_TEXT:Widget()}};",
+      "\t},",
+      ")"
+    ],
+    "description": "Create a simple RtSelector.",
+    "prefix": [
+      "rselector"
+    ],
+    "scope": "dart"
+  },
+  "Reactter RtWatcher": {
+    "body": [
+      "RtWatcher(",
       "\tbuilder: (context, child) {",
       "\t\treturn ${:${TM_SELECTED_TEXT:Widget()}};",
       "\t},",
       ")"
     ],
-    "description": "Create a simple ReactterWatcher.",
+    "description": "Create a simple RtWatcher.",
     "prefix": [
       "rwatcher"
+    ],
+    "scope": "dart"
+  },
+  "Reactter RtSignalWatcher": {
+    "body": [
+      "RtWatcher((context, watch) {",
+      "\t\treturn ${:${TM_SELECTED_TEXT:Widget()}};",
+      "})"
+    ],
+    "description": "Create a simple RtSignalWatcher.",
+    "prefix": [
+      "rswatcher"
     ],
     "scope": "dart"
   },
@@ -196,7 +237,7 @@
   },
   "Reactter create": {
     "body": [
-      "Reactter.create(builder: ${1:T}());"
+      "Rt.create(builder: ${1:T}());"
     ],
     "description": "Create a instance.",
     "prefix": [
@@ -206,7 +247,7 @@
   },
   "Reactter delete": {
     "body": [
-      "Reactter.delete();"
+      "Rt.delete();"
     ],
     "description": "Delete a instance.",
     "prefix": [
@@ -216,7 +257,7 @@
   },
   "Reactter emit event": {
     "body": [
-      "Reactter.emit(${1:instance}(), ${2:event}, ${0:param});"
+      "Rt.emit(${1:instance}(), ${2:event}, ${0:param});"
     ],
     "description": "Trigger event.",
     "prefix": [
@@ -226,7 +267,7 @@
   },
   "Reactter get": {
     "body": [
-      "Reactter.get<${1:T}>();"
+      "Rt.get<${1:T}>();"
     ],
     "description": "Get instance.",
     "prefix": [
@@ -236,7 +277,7 @@
   },
   "Reactter off event": {
     "body": [
-      "Reactter.off(${1:instance}(), ${2:event}, ${0:callback});"
+      "Rt.off(${1:instance}(), ${2:event}, ${0:callback});"
     ],
     "description": "Remov event listen",
     "prefix": [
@@ -246,7 +287,7 @@
   },
   "Reactter on event": {
     "body": [
-      "Reactter.on(${1:instance}, ${2:event}, ${0:callback});"
+      "Rt.on(${1:instance}, ${2:event}, ${0:callback});"
     ],
     "description": "Put event on listen",
     "prefix": [
@@ -256,7 +297,7 @@
   },
   "Reactter one event": {
     "body": [
-      "Reactter.one(${1:instance}(), ${2:event}, ${0:callback});"
+      "Rt.one(${1:instance}(), ${2:event}, ${0:callback});"
     ],
     "description": "Put event on listen for only once.",
     "prefix": [
